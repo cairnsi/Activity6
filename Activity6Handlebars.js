@@ -16,7 +16,7 @@ app.set('port', 3128);
 app.get('/',function(req,res){
   var context= {};
   context.name = "Not Set";
-  if(req.name){
+  if(req.query.name){
 	  req.session.name = req.name
 	  
   }
