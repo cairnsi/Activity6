@@ -17,6 +17,7 @@ app.get('/',function(req,res){
   var context= {};
   context.name = "Not Set";
   if(req.query.name){
+	  context.name = "trying to Set";
 	  req.session.name = req.name
 	  
   }
