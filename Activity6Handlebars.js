@@ -26,6 +26,9 @@ app.get('/',function(req,res){
   if(req.session.name){
 	  context.name = req.session.name;
   }
+  if(req.query.destroySession==="true"){
+	  req.session.destroy();
+  }
   var input = [];
   for(var item in req.query){
 	  input.push({'name':item, 'value': req.query[item]})
